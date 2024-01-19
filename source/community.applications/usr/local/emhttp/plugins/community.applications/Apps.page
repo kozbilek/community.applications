@@ -113,13 +113,13 @@ if ( is_file("/var/run/dockerd.pid") && is_dir("/proc/".@file_get_contents("/var
 if ( is_file($caPaths['docker_cfg']) )
   getAllInfo(true,false);
 
-// Check memory to see if CA's minimums are met (4G same as base OS) - Test is actually for 2.5G though
+// Check memory to see if CA's minimums are met (4G same as base OS) - Test is actually for 1G though
 
 $memRaw = trim(str_replace("MemTotal:","",exec("cat /proc/meminfo | grep MemTotal:")));
 $memoryInstalled = explode(" ",$memRaw);
 
 $RequirementsBanner = false;
-$CArequirementsNOTmet = $memoryInstalled[0] < 2500000;
+$CArequirementsNOTmet = $memoryInstalled[0] < 1000000;
 if ( $CArequirementsNOTmet && isset($_COOKIE['ca_memoryOverride']) && $_COOKIE['ca_memoryOverride']) {
   $CArequirementsNOTmet = false;
   $RequirementsBanner = "true";
