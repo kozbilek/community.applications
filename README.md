@@ -14,7 +14,7 @@ While the application currently works smoothly with the available RAM on my devi
 
 ## Installation
 
-Follow the standard installation instructions for community.applications. Ensure that you have a backup of your data before proceeding with the installation of this modified version.
+Paste the "https://raw.githubusercontent.com/kozbilek/community.applications/master/plugins/community.applications.plg" url to the required place on the Plugins > Install Plugin page and click Install. Then the installation will start and you can check it from the Installed Plugins tab after the installation process is completed. Ensure that you have a backup of your data before proceeding with the installation of this modified version.
 
 ## Contributing
 
